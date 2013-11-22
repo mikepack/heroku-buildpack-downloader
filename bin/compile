@@ -1,0 +1,17 @@
+#!/bin/sh
+
+indent() {
+  sed -u 's/^/       /'
+}
+
+echo "-----> Downloading files specified in .downloads"
+BUILD_DIR=$1
+DOWNLOADS_DIR="downloads"
+
+mkdir -p $DOWNLOADS_DIR
+cd $DOWNLOADS_DIR
+
+while read file; do
+  echo "Downloading: " $file
+  curl -L --silent $file
+done < ../.downloads

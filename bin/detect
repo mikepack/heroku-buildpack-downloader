@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ -e "$1/.downloads" ]
+  then
+    echo "downloader"
+    exit 0
+  else
+    exit 1
+fi
