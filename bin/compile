@@ -13,5 +13,5 @@ cd $DOWNLOADS_DIR
 
 while read file; do
   echo "Downloading: " $file
-  curl -L --silent $file
-done < ../.downloads
+  curl -O --silent $file
+done < "$BUILD_DIR/.downloads"
