@@ -12,6 +12,6 @@ mkdir -p $DOWNLOADS_DIR
 cd $DOWNLOADS_DIR
 
 while read file; do
-  echo "Downloading: " $file | indent
+  echo "Downloading:" $file | indent
   curl -O --silent $file
 done < "$BUILD_DIR/.downloads"
