@@ -6,7 +6,7 @@ indent() {
 
 echo "-----> Downloading files specified in .downloads"
 BUILD_DIR=$1
-DOWNLOADS_DIR="downloads"
+DOWNLOADS_DIR="vendor/downloads"
 
 mkdir -p $DOWNLOADS_DIR
 cd $DOWNLOADS_DIR
